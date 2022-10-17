@@ -1,0 +1,35 @@
+.container-profil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  &__mmp {
+    padding: 8px 15px;
+    background-color: $orange;
+    color: $white;
+    border-radius: 5px;
+    border: 2px solid $orange;
+    transition: all 0.5s;
+    margin-bottom: 100px;
+    &:hover {
+      background-color: $white;
+      color: $orange;
+    }
+  }
+  &__connexion {
+    padding: 8px 15px;
+    background-color: $green;
+    color: $white;
+    border-radius: 5px;
+    border: 2px solid $green;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $white;
+      color: $green;
+    }
+  }
+}

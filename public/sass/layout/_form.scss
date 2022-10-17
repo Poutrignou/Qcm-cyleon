@@ -1,0 +1,192 @@
+main {
+  width: 100%;
+  height: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+
+  .form {
+    padding: 90px 50px;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(241, 240, 240, 0.116);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+
+    @media (max-width: map-get($breakpoints-max, xs)) {
+      padding: 90px 15px;
+      width: 80%;
+      margin: auto;
+    }
+    & * {
+      color: white;
+    }
+    &__title {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-bottom: 25px;
+      &--smaller {
+        font-size: 0.75em;
+      }
+      @media (max-width: map-get($breakpoints-max, m)) {
+        font-size: 2em;
+      }
+      @media (max-width: map-get($breakpoints-max, s)) {
+        font-size: 1.8em;
+      }
+      @media (max-width: map-get($breakpoints-max, xs)) {
+        font-size: 1.6em;
+      }
+    }
+    &__sub-title {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 35px;
+      @media (max-width: map-get($breakpoints-max, s)) {
+        font-size: 1.1em;
+      }
+      @media (max-width: map-get($breakpoints-max, xs)) {
+        font-size: 1em;
+      }
+    }
+    &__fieldset {
+      width: 100%;
+      max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px 10px 10px;
+      margin-bottom: 20px;
+      &__legend {
+        text-align: center;
+        padding: 0 15px;
+      }
+    }
+    &__element {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      @media (max-width: map-get($breakpoints-max, xs)) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      &--inline {
+        flex-direction: row;
+      }
+      &--center {
+        text-align: center;
+      }
+      &__label {
+        margin: 0 0 8px 5px;
+        @media (max-width: map-get($breakpoints-max, m)) {
+          font-size: 0.95em;
+        }
+        @media (max-width: map-get($breakpoints-max, xs)) {
+          font-size: 0.9em;
+        }
+      }
+      &__input {
+        color: rgb(36, 36, 36);
+        padding: 3px 5px;
+        opacity: 0.95;
+        border-radius: 5px;
+        &--checkbox {
+          margin: 0 10px;
+          cursor: pointer;
+        }
+        &--center {
+          text-align: center;
+        }
+        &:focus {
+          outline: 1px solid $firstBlue;
+          opacity: 1;
+        }
+        @media (max-width: map-get($breakpoints-max, m)) {
+          font-size: 0.95em;
+        }
+        @media (max-width: map-get($breakpoints-max, xs)) {
+          font-size: 0.9em;
+        }
+      }
+      &__text {
+        font-size: 0.9em;
+        &--checkbox {
+          cursor: pointer;
+        }
+        &__link {
+          text-decoration: underline;
+        }
+      }
+      &__textarea {
+        color: rgb(36, 36, 36);
+        padding: 10px;
+        resize: none;
+        opacity: 0.95;
+        &:focus {
+          outline: 1px solid $firstBlue;
+          opacity: 1;
+        }
+        @media (max-width: map-get($breakpoints-max, m)) {
+          font-size: 0.95em;
+        }
+        @media (max-width: map-get($breakpoints-max, xs)) {
+          font-size: 0.9em;
+        }
+      }
+    }
+    &__link {
+      text-align: center;
+      font-size: 0.9em;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &__button {
+      color: white;
+      background-color: $orange;
+      border: 2px solid $white;
+      max-width: 240px;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 8px 15px;
+      transition-duration: 200ms;
+      letter-spacing: 0.175em;
+      border: 2px solid $orange;
+      &:hover {
+        text-shadow: black 0 -1px;
+        background-color: $white;
+        color: $orange;
+        text-shadow: none;
+        border: 2px solid $orange;
+      }
+    }
+    &__comment {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      & a {
+        text-decoration: underline;
+      }
+    }
+    &__error {
+      color: $firstOrange;
+      text-align: center;
+      margin-bottom: 15px;
+      @media (max-width: map-get($breakpoints-max, m)) {
+        font-size: 0.95em;
+      }
+      @media (max-width: map-get($breakpoints-max, xs)) {
+        font-size: 0.9em;
+      }
+    }
+  }
+}

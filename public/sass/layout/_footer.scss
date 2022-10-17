@@ -1,0 +1,10 @@
+footer {
+  width: 100%;
+  background-color: $orange;
+  height: 80px;
+  @include dflex(row, center, center);
+  p {
+    color: antiquewhite;
+    font-size: large;
+  }
+}

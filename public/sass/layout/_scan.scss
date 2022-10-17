@@ -1,0 +1,146 @@
+.main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  background-color: $secondBlue;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  @media (max-width: map-get($breakpoints-max, xs)) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  &__aside {
+    width: 25%;
+    height: auto;
+    @include dflex($modeAlign, $modeX, $modeY);
+    border-right: 2px solid rgb(172, 172, 172);
+    margin-bottom: 50px;
+    @media (max-width: map-get($breakpoints-max, l)) {
+      width: 60%;
+    }
+    @media (max-width: map-get($breakpoints-max, m)) {
+      width: 70%;
+    }
+    @media (max-width: map-get($breakpoints-max, xs)) {
+      width: 100%;
+      border: none;
+    }
+
+    &__container {
+      width: 90%;
+      @include dflex($modeAlign, $modeY);
+      margin-top: 40px;
+      padding: 10px;
+
+      &__box-camera {
+        margin-bottom: 30px;
+        &__cam {
+          border: 1px solid $orange;
+          width: 300px;
+          height: 222px;
+          border-radius: 20px;
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 20px;
+        }
+      }
+
+      .show2 {
+        width: 100%;
+      }
+
+      &__carte {
+        width: 100%;
+        padding: 35px;
+        @include dflex($modeAlign, $modeY);
+        box-shadow: 6px 9px 15px 1px rgba(0, 0, 0, 0.89);
+        border-radius: 20px;
+        background-color: $white;
+
+        &__image {
+          width: 70%;
+          margin-bottom: 40px;
+          img {
+            width: 100%;
+          }
+        }
+
+        &__body {
+          &__first {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+
+            &__name {
+              color: $orange;
+              font-size: x-large;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            &__nutriScore {
+              width: 30%;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+          &__text {
+            margin-top: 15px;
+            margin-bottom: 10px;
+          }
+
+          &__inp {
+            padding: 5px 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid rgba(142, 142, 142, 0.592);
+            &::-webkit-calendar-picker-indicator {
+              cursor: pointer;
+            }
+          }
+
+          &__buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+
+            &__validez {
+              padding: 8px 15px;
+              background-color: $green;
+              border: 2px solid $white;
+              border-radius: 24px;
+              cursor: pointer;
+              color: $white;
+              transition: all 0.2s;
+
+              &:hover {
+                background-color: $white;
+                color: $green;
+                border: 2px solid $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__section {
+    @media (max-width: map-get($breakpoints-max, xs)) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

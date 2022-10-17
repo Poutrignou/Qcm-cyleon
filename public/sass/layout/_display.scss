@@ -1,0 +1,61 @@
+.body-display {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  background-color: $secondBlue;
+  height: 100%;
+  // margin-top: 30px;
+}
+.main2 {
+  height: 100%;
+  margin: auto;
+  &__section2 {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+#scan1 {
+  font-family: "Satisfy", cursive;
+  font-style: normal;
+  font-weight: 400;
+  color: $orange;
+  font-size: 1.2em;
+  height: 100%;
+}
+#home1 {
+  font-family: "Satisfy", cursive;
+  font-style: normal;
+  font-weight: 400;
+  color: $green;
+  font-size: 1.2em;
+}
+#home1:hover {
+  text-decoration: underline;
+}
+#scan1:hover {
+  text-decoration: underline;
+}
+// footer {
+//   margin-top: auto;
+// }
+
+// .main__section__container {
+//   width: 100%;
+//   height: 100%;
+// }
+.active {
+  width: 400px;
+  @media (max-width: map-get($breakpoints-max, s)) {
+    width: 300px;
+    margin: 100px auto;
+  }
+}
+.show {
+  display: flex;
+  justify-content: center;
+  @media (max-width: map-get($breakpoints-max, s)) {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,87 @@
+.main__section {
+  width: 100%;
+  @include dflex(row, center, flex-start);
+  flex-wrap: wrap;
+  padding: 20px;
+  @media (max-width: map-get($breakpoints-max, xs)) {
+    padding: 0;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: map-get($breakpoints-max, xs)) {
+      overflow-y: scroll;
+      min-height: 300px;
+      max-height: 540px;
+      padding: none;
+    }
+    &__card {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      margin-left: 60px;
+      width: 300px;
+      height: 100px;
+      box-shadow: 6px 5px 10px 1px rgba(88, 88, 88, 0.89);
+      border-radius: 5px;
+      margin-bottom: 30px;
+      background-color: $white;
+      @media (max-width: map-get($breakpoints-max, xs)) {
+        margin: 20px auto;
+      }
+      &__image {
+        width: 100px;
+        overflow: hidden;
+        max-height: 100%;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+          max-height: 100%;
+        }
+      }
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        margin-left: 10px;
+        h5 {
+          color: $orange;
+          font-size: 0.8em;
+          margin: 0;
+        }
+        &__date {
+          font-weight: bold;
+          margin: 0;
+          &--red {
+            color: red;
+          }
+          &--orange {
+            color: orange;
+          }
+          &--green {
+            color: $green;
+          }
+        }
+      }
+      &__btn {
+        display: flex;
+        align-items: flex-end;
+        button {
+          border: none;
+          cursor: pointer;
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+:hover.main__section__container__card {
+  transform: scale(1.1);
+}

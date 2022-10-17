@@ -1,0 +1,88 @@
+header {
+  width: 100%;
+  .nav-container {
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    border-bottom: 2px solid $orange;
+    @include dflex(row, space-between, flex-end);
+    padding: 20px;
+    @media (max-width: map-get($breakpoints-max, xs)) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    &__box-logo {
+      @include dflex(row, center, center);
+      width: auto;
+      img {
+        @media (max-width: map-get($breakpoints-max, xs)) {
+          font-size: 1.5em;
+          width: 50px;
+        }
+      }
+      &__title {
+        margin-left: 20px;
+        font-family: "Satisfy", cursive;
+        font-size: 2.5em;
+        text-align: center;
+        @media (max-width: map-get($breakpoints-max, xs)) {
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    &__box-links {
+      display: flex;
+      justify-content: center;
+      @media (max-width: map-get($breakpoints-max, xs)) {
+        margin-top: 10px;
+      }
+      &__nav-link-home {
+        text-decoration: none;
+        font-family: "Satisfy", cursive;
+        font-style: normal;
+        font-weight: 400;
+        color: $green;
+        font-size: 1.2em;
+        margin-left: 20px;
+        @media (max-width: map-get($breakpoints-max, xs)) {
+          margin-left: 0;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &__nav-link-scan {
+        text-decoration: none;
+        font-family: "Satisfy", cursive;
+        font-style: normal;
+        font-weight: 400;
+        color: $orange;
+        font-size: 1.2em;
+        margin-left: 20px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &__nav-link-deco {
+        text-decoration: none;
+        font-family: "Satisfy", cursive;
+        font-style: normal;
+        font-weight: 400;
+        color: purple;
+        font-size: 1.2em;
+        margin-left: 20px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    @media (max-width: map-get($breakpoints-max, xs)) {
+      flex-direction: column;
+    }
+  }
+}
